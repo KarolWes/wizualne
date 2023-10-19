@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minutnik", "minutnik\minutn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minutnik1", "Minutnik1\Minutnik1.csproj", "{475E7B6C-0AEC-4F90-8949-24D7598C7F08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestKlas", "TestKlas\TestKlas.csproj", "{CF60D94A-7DFB-406A-971F-29FB4DF264EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{475E7B6C-0AEC-4F90-8949-24D7598C7F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{475E7B6C-0AEC-4F90-8949-24D7598C7F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{475E7B6C-0AEC-4F90-8949-24D7598C7F08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF60D94A-7DFB-406A-971F-29FB4DF264EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF60D94A-7DFB-406A-971F-29FB4DF264EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF60D94A-7DFB-406A-971F-29FB4DF264EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF60D94A-7DFB-406A-971F-29FB4DF264EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
