@@ -2,19 +2,19 @@
 
 public class Supervisor: Manager
 {
-    public Supervisor(string imie, string nazwisko, DateTime dataUrodzenia) : base(imie, nazwisko, dataUrodzenia)
+    public Supervisor(string imie, string nazwisko, int age) : base(imie, nazwisko, age)
     {
         Console.WriteLine("Supervisor constructor");
     }
 
-    public Supervisor() : this("imie", "nazwisko", new DateTime(1990, 1,1))
+    public Supervisor() : this("imie", "nazwisko", 33)
     {
         Console.WriteLine("argumentless constructor");
     }
 
 
 #pragma warning disable CS0114
-    public string ToString()
+    public override string ToString()
     {
         return base.ToString() + " - Supervisor";
     }

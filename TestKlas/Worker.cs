@@ -2,12 +2,12 @@
 
 namespace wizualne;
 
-public abstract class Worker
+public abstract class Worker: IPrintable, IPublicPrintable, IComparable
 {
     private string _imie;
     private string _nazwisko;
     private Guid _id;
-    private DateTime _dataUrodzenia;
+    private int _age;
     public static int x;
 
     public String Imie
@@ -22,41 +22,65 @@ public abstract class Worker
         set => _nazwisko = value;
     }
 
-    public Guid ID
-    {
-        get => _id;
-        set => _id = value;
-    }
+    // public Guid ID
+    // {
+    //     get => _id;
+    //     set => _id = value;
+    // }
 
-    public DateTime DataUrodzenia
+    public int Age
     {
-        get => _dataUrodzenia;
-        set => _dataUrodzenia = value;
+        get => _age;
+        set => _age = value;
     }
 
 
     public override string ToString()
     {
-        return Imie + " " + Nazwisko + " (" + ID.ToString() + ")";  
+        return Imie + " " + Nazwisko + " (" + Age + ")";  
     }
 
-    public void GenerateNewID()
+    public int CompareTo(object? obj)
     {
-        ID = Guid.NewGuid();
+        Worker w = obj as Worker;
+        return this.Age.CompareTo(w.Age);
     }
 
-    protected Worker(string imie, string nazwisko, DateTime dataUrodzenia)
+    // public void GenerateNewID()
+    // {
+    //     ID = Guid.NewGuid();
+    // }
+
+    protected Worker(string imie, string nazwisko, int age)
     {
         Console.WriteLine("Worker constructor");
         Imie = imie;
         Nazwisko = nazwisko;
-        DataUrodzenia = dataUrodzenia;
-        GenerateNewID();
+        Age = age;
+        //GenerateNewID();
     }
 
     static Worker()
     {
         Console.WriteLine("static constructor");
         
+    }
+
+    public int Id { get; set; }
+    void IPrintable.Print()
+    {
+        Console.WriteLine(Imie + " " + Nazwisko + " (" + Id + ")");
+         
+    }
+
+    void IPublicPrintable.Print()
+    {
+        Console.WriteLine(Imie + " " + Nazwisko);
+    }
+
+    public virtual void Print()
+    {
+        ((IPrintable)this).Print();
+        Console.WriteLine("Virtual");
     }
 }

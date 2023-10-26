@@ -2,14 +2,14 @@
 
 public class Manager : Worker
 {
-    public Manager(string imie, string nazwisko, DateTime dataUrodzenia) : base(imie, nazwisko, dataUrodzenia)
+    public Manager(string imie, string nazwisko, int age) : base(imie, nazwisko, age)
     {
         Console.WriteLine("Manager constructor");
     }
     
     
 
-    public sealed override string ToString()
+    public override string ToString()
     {
         return base.ToString() + " - Manager";
     }

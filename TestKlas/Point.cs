@@ -1,17 +1,17 @@
 ﻿namespace wizualne;
 
-public readonly struct Point
+public class Point
 {
     private readonly int _x;
     private readonly int _y;
 
-    public readonly int x
+    public int x
     {
         get => _x;
         init => _x = value;
     }
 
-    public readonly int y
+    public int y
     {
         get => _y;
         init => _y = value;
